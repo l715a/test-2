@@ -1,0 +1,39 @@
+.recent-articles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row warp;
+    gap: 14px;
+}
+
+.recent-articles li {
+    flex: 1 1 auto;
+    max-width: 260px;
+}
+
+.recent-articles img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.recent-articles h4 {
+    font-weight: 700;
+    font-size: var(--body-font-size-s);
+    font-family: var(--body-font-family);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.recent-articles p {
+    font-size: var(--body-font-size-xs);
+    color: #696969;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 1.5em 0 0;
+    line-height: 1;
+}
+
