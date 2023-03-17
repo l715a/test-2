@@ -8,7 +8,7 @@ export default async function decorate(block) {
     const teasers = data.map(({
       path, image, description, title,
     }) => {
-      const picture = createOptimizedPicture(image, '', false, [{ width: 400 }]);
+      const picture = createOptimizedPicture(image, '', true, [{ width: 400 }]);
       return `<a href="${path}" title="${title}" class="recent-article">
                 ${picture.outerHTML}
                 <h4>${title}</h4>
