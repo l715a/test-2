@@ -7,8 +7,8 @@ export default async function decorate(block) {
     const { data } = await resp.json();
     const teasers = data.map(({
       path, image, description, title,
-    }) => {
-      const picture = createOptimizedPicture(image, '', true, [{ width: 400 }]);
+    }, index) => {
+      const picture = createOptimizedPicture(image, '', index === 0, [{ width: 400 }]);
       return `<a href="${path}" title="${title}" class="recent-article">
                 ${picture.outerHTML}
                 <h4>${title}</h4>
